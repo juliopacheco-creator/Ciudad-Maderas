@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudad Maderas Sucursal Plaza Norte (Autorizada)</title>
+    <meta name="description" content="Sitio oficial de Ciudad Maderas Sucursal Plaza Norte (Autorizada). Terrenos premium en Querétaro, Mérida, Cancún y más. Plusvalía garantizada.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;900&family=JetBrains+Mono:wght@300;500;800&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #ffffff;
+            /* Architectural Drawing Grid */
+            background-image: 
+                radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 1px),
+                linear-gradient(rgba(0, 21, 41, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 21, 41, 0.02) 1px, transparent 1px);
+            background-size: 30px 30px, 120px 120px, 120px 120px;
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        
+        .gold-accent { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .border-gold { border-color: #D4AF37; }
+        .bg-navy-deep { background-color: #001529; }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f8f8f8; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; }
+
+        @keyframes gold-shine {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .text-gold-metallic {
+            background: linear-gradient(90deg, #D4AF37 0%, #FBF5B7 50%, #D4AF37 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gold-shine 4s linear infinite;
+        }
+
+        /* Essential 1px Borders */
+        .gold-frame-1px {
+            border: 1px solid #D4AF37 !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+        }
+
+        .blueprint-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-opacity='0.05' stroke-width='0.5'%3E%3Cpath d='M0 0 L60 60 M60 0 L0 60'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .tech-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 8px;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: #D4AF37;
+            opacity: 0.6;
+        }
+
+        .watermark-text {
+            position: absolute;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 15vw;
+            color: rgba(0, 21, 41, 0.02);
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 0;
+            user-select: none;
+        }
+
+        .official-social-btn {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 1px solid #D4AF37;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .official-social-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "leaflet": "https://esm.sh/leaflet@1.9.4"
+  }
+}
+</script>
+</head>
+<body class="overflow-x-hidden">
+    <div id="root"></div>
+</body>
+</html>

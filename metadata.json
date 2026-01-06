@@ -1,0 +1,7 @@
+{
+  "name": "Ciudad Maderas Sucursal Plaza Norte (Autorizada)",
+  "description": "Sitio web oficial informativo y promocional de Ciudad Maderas Sucursal Plaza Norte (Autorizada), líder en desarrollos inmobiliarios en México.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
